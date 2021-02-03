@@ -15,6 +15,12 @@ class PlaySessionsController < ApplicationController
         render json: play_session
     end
 
+    def update
+        play_session = PlaySession.find(params[:id])
+        play_session.update(play_session_params)
+        render json: play_session
+    end
+
     def destroy
         play_session = PlaySession.find(params[:id])
         play_session.destroy
@@ -24,6 +30,6 @@ class PlaySessionsController < ApplicationController
     private 
     
     def play_session_params
-        params.permit(:sender_id, :receiver_id, :is_accepted, :game_id)
+        params.permit(:sender_id, :receiver_id, :is_accepted, :game_id, :time)
     end
 end

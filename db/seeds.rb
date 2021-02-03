@@ -7,12 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-# User.destroy_all
+User.destroy_all
 Game.destroy_all
 UserGame.destroy_all
+PlaySession.destroy_all
 
-# User.create(username: "jmoney", name: "jeremy", avatar: "https://imgsrc.hubblesite.org/hvi/uploads/image/social_media_image/3862/STScI-H-2015-01-c-display-M16.png", bio: "Lookin' to game", discord: "j#0001", lfg: false)
-# User.create(username: "cool_dude1", name: "keanu", avatar: "https://cdn.vox-cdn.com/thumbor/Yd7b7iobK45wxkAo-62R39OItbU=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/16329042/cyberpunk_2077_keanu_reeves_1920.png", bio: "Wake the frick up Samurai, We got a city to burn", discord: "kr#0001", lfg: false)
+User.create(username: "jmoney", name: "jeremy", avatar: "https://imgsrc.hubblesite.org/hvi/uploads/image/social_media_image/3862/STScI-H-2015-01-c-display-M16.png", bio: "Lookin' to game", discord: "j#0001", lfg: false)
+User.create(username: "cool_dude1", name: "keanu", avatar: "https://cdn.vox-cdn.com/thumbor/Yd7b7iobK45wxkAo-62R39OItbU=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/16329042/cyberpunk_2077_keanu_reeves_1920.png", bio: "Wake the frick up Samurai, We got a city to burn", discord: "kr#0001", lfg: false)
 
 Game.create!(name: "League of Legends", genre: "MOBA", image:"https://i2.wp.com/www.techdigest.tv/wp-content/uploads/2020/09/league-of-legends.jpg?ssl=1" , splash:"https://wallpaperaccess.com/full/217097.jpg" )
 Game.create(name: "Apex Legends", genre: "Battle Royale", image: "https://cdn.wccftech.com/wp-content/uploads/2019/02/apex-legends-keyart.jpg", splash: "https://image-cdn.essentiallysports.com/wp-content/uploads/20201001212953/apex-legends-5.jpg")
@@ -24,3 +25,5 @@ Game.create(name: "Among Us", genre: "Party", image: "https://cdn.akamai.steamst
 UserGame.create(user_id: User.first.id, game_id: Game.first.id, details: "Hit Challenger S4, hit me up")
 UserGame.create(user_id: User.second.id, game_id: Game.first.id, details: "Only play unranked lol")
 UserGame.create(user_id: User.first.id, game_id: Game.second.id, details: "20k kills on wraith, wraith main btw xD")
+
+PlaySession.create!(sender_id: User.first.id, receiver_id: User.second.id, game_id: Game.first.id, is_accepted: false)
