@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+    before_action :authorize, only: [:profile]
+
     def index
         users = User.all
         render json: users
@@ -11,7 +13,6 @@ class UsersController < ApplicationController
     end
 
     def profile
-        user = User.find_by(id: params[:id])
-        render json: user
+        render json: @user
     end
 end

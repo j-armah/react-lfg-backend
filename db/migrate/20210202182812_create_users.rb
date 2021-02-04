@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.text :bio
       t.string :discord
       t.boolean :lfg
+      t.string :password_digest
 
       t.timestamps
     end

@@ -8,6 +8,7 @@ class CreateUserGames < ActiveRecord::Migration[6.1]
       t.string :level
       t.string :server
       t.string :image
+      
 
       t.timestamps
     end
