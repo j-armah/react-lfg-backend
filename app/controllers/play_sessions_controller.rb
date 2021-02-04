@@ -30,6 +30,6 @@ class PlaySessionsController < ApplicationController
     private 
     
     def play_session_params
-        params.permit(:sender_id, :receiver_id, :is_accepted, :game_id, :time)
+        params.permit(:sender_id, :receiver_id, :is_accepted, :game_id, :rejected, :time)
     end
 end

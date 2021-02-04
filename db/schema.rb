@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2021_02_02_183733) do
     t.integer "receiver_id"
     t.integer "game_id"
     t.boolean "is_accepted"
+    t.boolean "rejected"
     t.datetime "time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -47,6 +48,10 @@ ActiveRecord::Schema.define(version: 2021_02_02_183733) do
     t.integer "user_id"
     t.integer "game_id"
     t.text "details"
+    t.string "platform"
+    t.string "level"
+    t.string "server"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

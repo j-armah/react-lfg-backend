@@ -5,6 +5,7 @@ class CreatePlaySessions < ActiveRecord::Migration[6.1]
       t.integer :receiver_id
       t.integer :game_id
       t.boolean :is_accepted
+      t.boolean :rejected
       t.datetime :time
 
       t.timestamps
