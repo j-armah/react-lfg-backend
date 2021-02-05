@@ -25,6 +25,7 @@ class AuthController < ApplicationController
     end
   end
 
+
   private
 
   def register_params
