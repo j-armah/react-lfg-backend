@@ -8,6 +8,8 @@ class CreatePlaySessions < ActiveRecord::Migration[6.1]
       t.boolean :rejected
       t.datetime :time
 
+
+
       t.timestamps
     end
   end

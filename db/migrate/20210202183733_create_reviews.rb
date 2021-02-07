@@ -5,6 +5,7 @@ class CreateReviews < ActiveRecord::Migration[6.1]
       t.integer :reviewee_id
       t.text :contents
       t.float :rating
+      t.integer :play_session_id
 
       t.timestamps
     end

@@ -4,4 +4,5 @@ class PlaySession < ApplicationRecord
 
     # has_one :game
     belongs_to :game
+    has_many :reviews
 end

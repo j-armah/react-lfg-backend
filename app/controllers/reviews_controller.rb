@@ -30,6 +30,6 @@ class ReviewsController < ApplicationController
     private 
     
     def review_params
-        params.permit(:reviewer_id, :reviewee_id, :contents, :rating)
+        params.permit(:reviewer_id, :reviewee_id, :contents, :rating, :play_session_id)
     end
 end

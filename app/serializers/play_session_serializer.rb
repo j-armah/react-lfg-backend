@@ -6,4 +6,5 @@ class PlaySessionSerializer < ActiveModel::Serializer
 
   # has_one :game
   belongs_to :game
+  has_many :reviews
 end
