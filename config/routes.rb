@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   post "/login", to: "auth#login"
   post "/register", to: "auth#register"
   get "/user_games/:id/users/:id", to: "users#show"
+  post "/signup", to: "auth#register"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

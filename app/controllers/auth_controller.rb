@@ -29,7 +29,7 @@ class AuthController < ApplicationController
   private
 
   def register_params
-    params.permit(:username, :password)
+    params.permit(:username, :password, :name, :avatar, :bio, :discord, :lfg)
   end
   
   def encode_token(payload)
