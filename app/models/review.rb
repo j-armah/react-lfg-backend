@@ -4,5 +4,5 @@ class Review < ApplicationRecord
 
     belongs_to :play_session
 
-    validates :reviewer_id, uniqueness: {scope: :reviewee_id}
+    validates :reviewer_id, uniqueness: {scope: [:reviewee_id, :play_session_id] }
 end
