@@ -21,6 +21,12 @@ class UserGamesController < ApplicationController
         render json: user_game
     end
 
+    def destroy
+        user_game = UserGame.find(params[:id])
+        user_game.destroy
+        render json: user_game
+    end
+
     private
 
     def user_game_params
