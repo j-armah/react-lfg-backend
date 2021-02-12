@@ -12,6 +12,7 @@
 # UserGame.destroy_all
 # PlaySession.destroy_all
 # Review.destroy_all
+# Tag.destroy_all
 
 # User.create!(username: "jmoney", password: "123", name: "jeremy", avatar: "https://imgsrc.hubblesite.org/hvi/uploads/image/social_media_image/3862/STScI-H-2015-01-c-display-M16.png", bio: "Lookin' to game", discord: "j#0001", lfg: false)
 # User.create!(username: "cool_dude1",  password: "123",name: "keanu", avatar: "https://cdn.vox-cdn.com/thumbor/Yd7b7iobK45wxkAo-62R39OItbU=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/16329042/cyberpunk_2077_keanu_reeves_1920.png", bio: "Wake the frick up Samurai, We got a city to burn", discord: "kr#0001", lfg: false)
@@ -53,3 +54,12 @@
 # Game.create!(name: "Terraria", genre: "Sandbox", image:"https://www.videogameschronicle.com/files/2021/02/terraria.jpg" , splash:"https://steamcdn-a.akamaihd.net/steam/apps/105600/library_hero.jpg?t=1588170166" )
 
 
+# Tag.create!(name: "Chill")
+# Tag.create!(name: "Tilt-proof")
+# Tag.create!(name: "Team player")
+# Tag.create!(name: "Friendly")
+# Tag.create!(name: "Interactive")
+# Tag.create!(name: "Strategic")
+# Tag.create!(name: "Humorous")
+# Tag.create!(name: "Creative")
+# Tag.create!(name: "Carry")

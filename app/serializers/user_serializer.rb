@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :username, :name, :avatar, :bio, :discord, :lfg, :reviews_as_reviewee, :reviews_as_reviewer, :avg
+  attributes :id, :username, :name, :avatar, :bio, :discord, :lfg, :reviews_as_reviewee, :reviews_as_reviewer, :avg#, :total_tags
 
   has_many :sessions_as_receiver, foreign_key: :receiver_id, class_name: "PlaySession"
   has_many :sessions_as_sender, foreign_key: :sender_id, class_name: "PlaySession"
@@ -12,7 +12,7 @@ class UserSerializer < ActiveModel::Serializer
 
   def reviews_as_reviewee
     reviews_as_reviewee = self.object.reviews_as_reviewee.reverse
-
+    
     return reviews_as_reviewee
   end
 
@@ -33,4 +33,19 @@ class UserSerializer < ActiveModel::Serializer
     user_sessions.flatten.select{ |session| session.accepted == true}
     return user_sessions
   end
+
+  # def total_tags
+  #   tag_hash = {}
+  #   for tag_arr in self.object.reviews_as_reviewee.tags do 
+  #     for tag in tag_arr do
+  #       if hash[tag.name]
+  #         hash[tag.name] += 1
+  #       else
+  #         hash[tag.name] = 1
+  #       end
+  #     end
+  #   end
+  #   return tag_hash
+  # end
+
 end

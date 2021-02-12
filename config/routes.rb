@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :tags
+  resources :review_tags
   resources :reviews
   resources :play_sessions
   resources :games
