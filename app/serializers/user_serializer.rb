@@ -27,4 +27,10 @@ class UserSerializer < ActiveModel::Serializer
       return avg_rating
     end
   end
+
+  def accepted_sessions
+    user_sessions = [self.object.sessions_as_receiver, self.object.sessions_as_receiver]
+    user_sessions.flatten.select{ |session| session.accepted == true}
+    return user_sessions
+  end
 end
