@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :games
   resources :user_games
   resources :users
+  resources :items, only: [:create]
 
   post "/", to: "auth#login"
   get "/profile", to: "users#profile"

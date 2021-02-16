@@ -41,6 +41,7 @@ class UserSerializer < ActiveModel::Serializer
     return recommends
   end
 
+
   # def total_tags
   #   tag_hash = {}
   #   for tag_arr in self.object.reviews_as_reviewee.tags do 
