@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :username, :name, :avatar, :bio, :discord, :lfg, :reviews_as_reviewee, :reviews_as_reviewer, :avg#, :total_tags
+  attributes :id, :username, :name, :avatar, :bio, :discord, :lfg, :reviews_as_reviewee, :reviews_as_reviewer, :avg, :recommends
 
   has_many :sessions_as_receiver, foreign_key: :receiver_id, class_name: "PlaySession"
   has_many :sessions_as_sender, foreign_key: :sender_id, class_name: "PlaySession"
@@ -32,6 +32,13 @@ class UserSerializer < ActiveModel::Serializer
     user_sessions = [self.object.sessions_as_receiver, self.object.sessions_as_receiver]
     user_sessions.flatten.select{ |session| session.accepted == true}
     return user_sessions
+  end
+
+  def recommends
+    reviews_as_reviewee = self.object.reviews_as_reviewee
+    recommends = reviews_as_reviewee.select { |review| review.rating >= 4}.length
+
+    return recommends
   end
 
   # def total_tags

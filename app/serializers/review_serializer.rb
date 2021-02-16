@@ -16,4 +16,5 @@ class ReviewSerializer < ActiveModel::Serializer
   def tags
     tags = self.object.tags
   end
+
 end
