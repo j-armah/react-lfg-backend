@@ -7,17 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-# User.destroy_all
-# Game.destroy_all
+User.destroy_all
+Game.destroy_all
 # UserGame.destroy_all
 # PlaySession.destroy_all
 # Review.destroy_all
-# Tag.destroy_all
+Tag.destroy_all
 
-# User.create!(username: "jmoney", password: "123", name: "jeremy", avatar: "https://imgsrc.hubblesite.org/hvi/uploads/image/social_media_image/3862/STScI-H-2015-01-c-display-M16.png", bio: "Lookin' to game", discord: "j#0001", lfg: false)
-# User.create!(username: "cool_dude1",  password: "123",name: "keanu", avatar: "https://cdn.vox-cdn.com/thumbor/Yd7b7iobK45wxkAo-62R39OItbU=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/16329042/cyberpunk_2077_keanu_reeves_1920.png", bio: "Wake the frick up Samurai, We got a city to burn", discord: "kr#0001", lfg: false)
-# User.create!(username: "makima happy meal",  password: "123", name: "greg", avatar: "https://i.redd.it/h3u4akn5vmy31.jpg", bio: "woof", discord: "bigmak#5313", lfg: false)
-# User.create!(username: "genji_main_btw",  password: "123", name: "steph", avatar: "https://i.pinimg.com/originals/c9/30/c1/c930c11c3c46486f69a27d62f708036c.jpg", bio: "If I don't get genji, I leave game", discord: "asdwqwe#0123", lfg: false)
+User.create!(username: "jmoney", password: "123", name: "jeremy", avatar: "https://imgsrc.hubblesite.org/hvi/uploads/image/social_media_image/3862/STScI-H-2015-01-c-display-M16.png", bio: "Lookin' to game", discord: "j#0001", lfg: false)
+User.create!(username: "cool_dude1",  password: "123",name: "keanu", avatar: "https://cdn.vox-cdn.com/thumbor/Yd7b7iobK45wxkAo-62R39OItbU=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/16329042/cyberpunk_2077_keanu_reeves_1920.png", bio: "Wake the frick up Samurai, We got a city to burn", discord: "kr#0001", lfg: false)
+User.create!(username: "makima happy meal",  password: "123", name: "greg", avatar: "https://i.redd.it/h3u4akn5vmy31.jpg", bio: "woof", discord: "bigmak#5313", lfg: false)
+User.create!(username: "genji_main_btw",  password: "123", name: "steph", avatar: "https://i.pinimg.com/originals/c9/30/c1/c930c11c3c46486f69a27d62f708036c.jpg", bio: "If I don't get genji, I leave game", discord: "asdwqwe#0123", lfg: false)
 
 Game.create!(name: "League of Legends", genre: "MOBA", image:"https://i2.wp.com/www.techdigest.tv/wp-content/uploads/2020/09/league-of-legends.jpg?ssl=1" , splash:"https://wallpaperaccess.com/full/217097.jpg" )
 Game.create!(name: "Apex Legends", genre: "Battle Royale", image: "https://cdn.wccftech.com/wp-content/uploads/2019/02/apex-legends-keyart.jpg", splash: "https://image-cdn.essentiallysports.com/wp-content/uploads/20201001212953/apex-legends-5.jpg")
